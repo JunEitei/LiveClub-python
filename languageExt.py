@@ -15,8 +15,8 @@ def add_language_suffix(folder_path, suffix):
             print(f'Renamed: {old_file_path} -> {new_file_path}')
 
 # 指定文件夹路径和后缀
-folder_path = 'Posts'  # 替换为你的文件夹路径
-suffix = '.ja'  # 要添加的后缀
+folder_path = 'Posts_sp'  # 替换为你的文件夹路径
+suffix = '.es'  # 要添加的后缀
 
 # 调用函数
 add_language_suffix(folder_path, suffix)

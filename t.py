@@ -3,7 +3,7 @@ from deep_translator import GoogleTranslator, exceptions
 
 # 定义输入和输出文件夹路径
 input_folder = 'Posts'  # 输入的 Markdown 文件夹
-output_folder = 'Posts_de'  # 输出的 Markdown 文件夹，指定为德文
+output_folder = 'Posts_en'  # 输出的 Markdown 文件夹，指定为德文
 
 # 创建输出文件夹（如果不存在）
 os.makedirs(output_folder, exist_ok=True)
@@ -29,7 +29,6 @@ for filename in os.listdir(input_folder):
             # 记录原行的换行符和尾部空格
             newline_character = '\n' if line.endswith('\n') else ''
             trailing_spaces = len(line) - len(trimmed_line)  # 计算尾部空格数量
-
             try:
                 translated_line = GoogleTranslator(source='auto', target='english').translate(trimmed_line)
                 if translated_line is None:

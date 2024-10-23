@@ -18,10 +18,12 @@ for filename in os.listdir(input_folder):
         with open(input_file_path, 'r', encoding='utf-8') as file:
             content = file.readlines()  # 逐行读取文件内容
 
-        # 翻译内容并保留每一行末尾的空格
+        # 提取前四行
+        front_matter = content[:4]  # 保留前四行
         translated_lines = []
-        for line in content:
-            # 去掉行末的空格，进行翻译，再加回空格
+
+        # 翻译剩余的内容
+        for line in content[4:]:  # 从第五行开始翻译
             trimmed_line = line.rstrip()  # 去掉行末空格
 
             try:
@@ -34,9 +36,20 @@ for filename in os.listdir(input_folder):
 
             translated_lines.append(translated_line + ' ' * (len(line) - len(trimmed_line)))  # 加回原有的空格
 
+        # 将翻译后的内容合并
+        final_content = front_matter + translated_lines
+
+        # 更新 title 行
+        for i, line in enumerate(final_content):
+            if line.startswith('title ='):
+                # 提取原有的标题并更新
+                original_title = line.split('"')[1]  # 提取引号内的原始标题
+                new_title = GoogleTranslator(source='auto', target='german').translate(original_title)  # 翻译标题
+                final_content[i] = f'title = "{new_title}"\n'  # 替换为新的标题
+
         # 保存翻译后的内容到新文件
         with open(output_file_path, 'w', encoding='utf-8') as file:
-            file.writelines(translated_lines)  # 写入翻译后的所有行
+            file.writelines(final_content)  # 写入翻译后的所有行
 
         print(f"翻译完成: {filename} -> {output_file_path}")
 

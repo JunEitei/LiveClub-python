@@ -26,6 +26,10 @@ for filename in os.listdir(input_folder):
         for line in content[4:]:  # 从第五行开始翻译
             trimmed_line = line.rstrip()  # 去掉行末空格
 
+            # 记录原行的换行符和尾部空格
+            newline_character = '\n' if line.endswith('\n') else ''
+            trailing_spaces = len(line) - len(trimmed_line)  # 计算尾部空格数量
+
             try:
                 translated_line = GoogleTranslator(source='auto', target='german').translate(trimmed_line)
                 if translated_line is None:
@@ -34,7 +38,8 @@ for filename in os.listdir(input_folder):
             except exceptions.NotValidPayload:  # 处理无效负载错误
                 translated_line = trimmed_line  # 如果出现翻译错误，则使用原始行
 
-            translated_lines.append(translated_line + ' ' * (len(line) - len(trimmed_line)))  # 加回原有的空格
+            # 添加回原有的空格和换行符
+            translated_lines.append(translated_line + ' ' * trailing_spaces + newline_character)
 
         # 将翻译后的内容合并
         final_content = front_matter + translated_lines

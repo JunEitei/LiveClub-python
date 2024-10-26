@@ -4,8 +4,8 @@ import os
 folder_path = 'M'
 
 # 要替換的舊字符串和新字符串
-old_string = '%E6%A1%83.mp3'
-new_string = '%E6%A1%83.m4a'
+old_string = '.m4a" >}}'
+new_string = '.m4a" preload="none" >}}'
 
 # 遍歷文件夾中的所有 .md 文件
 for filename in os.listdir(folder_path):
@@ -15,6 +15,8 @@ for filename in os.listdir(folder_path):
         # 打開文件並讀取內容
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
+
+
 
         # 檢查文件內容是否包含要替換的字符串
         if old_string in content:

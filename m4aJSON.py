@@ -1,0 +1,18 @@
+import os
+import json
+
+# 音樂目錄路徑
+music_directory = 'music'
+
+# 獲取音樂文件列表
+music_files = [f for f in os.listdir(music_directory) if f.endswith('.m4a')]
+
+# 將文件路徑轉換為完整路徑
+music_files = [os.path.join(music_directory, f) for f in music_files]
+
+# 將音樂文件列表寫入 JSON 文件
+json_file_path = 'music_files.json'
+with open(json_file_path, 'w', encoding='utf-8') as json_file:
+    json.dump(music_files, json_file, ensure_ascii=False, indent=4)
+
+print(f'音樂文件列表已成功寫入 {json_file_path}')

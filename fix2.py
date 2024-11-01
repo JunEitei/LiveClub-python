@@ -19,6 +19,7 @@ def replace_audio_tag_in_md_files(folder_path):
                     with open(file_path, 'w', encoding='utf-8') as f:
                         f.write(new_content)
                     print(f'Replaced in: {file_path}')
+                    print(f'Repla')
 
 
 # 指定要处理的文件夹路径

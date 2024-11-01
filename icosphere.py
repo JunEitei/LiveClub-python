@@ -14,7 +14,9 @@ def icosphere(subdivisions=1):
     - vertices: 球体的顶点列表。
     - faces: 球体的面列表，每个面由顶点索引组成。
     """
-    # 定义黄金比例
+    # 定义黄金比例】
+
+
     t = (1.0 + np.sqrt(5.0)) / 2.0
 
     # 基础正二十面体的顶点列表
@@ -33,6 +35,16 @@ def icosphere(subdivisions=1):
         [-t, 0, 1],
     ])
 
+    # 细分面，使球体更平滑
+    for _ in range(subdivisions):
+        faces_subdivided = []
+        for tri in faces:
+            # 获取面上的三个顶点
+            v0 = vertices[tri[0]]
+            v1 = vertices[tri[1]]
+            v2 = vertices[tri[2]]
+
+
     # 基础正二十面体的面列表
     faces = np.array([
         [0, 11, 5], [0, 5, 1], [0, 1, 7], [0, 7, 10], [0, 10, 11],
@@ -43,6 +55,7 @@ def icosphere(subdivisions=1):
 
     # 细分面，使球体更平滑
     for _ in range(subdivisions):
+
         faces_subdivided = []
         for tri in faces:
             # 获取面上的三个顶点

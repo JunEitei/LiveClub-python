@@ -1,28 +1,35 @@
-def is_prime(num):
-    """判断一个数字是否为素数"""
-    if num < 2:
-        return False
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
+def sieve_of_eratosthenes(n):
+    """返回小于等于 n 的所有素数"""
+    is_prime = [True] * (n + 1)
+    p = 2
+    while p * p <= n:
+        if is_prime[p]:
+            for i in range(p * p, n + 1, p):
+                is_prime[i] = False
+        p += 1
+    return [p for p in range(2, n + 1) if is_prime[p]]
 
-def goldbach_conjecture(limit):
-    """输出100以下的偶数分解成两个素数的结果"""
-    primes = [i for i in range(limit) if is_prime(i)]
-    results = {}
 
-    for even in range(4, limit + 1, 2):
-        pairs = []
-        for p in primes:
-            if p > even // 2:  # 只考虑不重复的组合
-                break
-            if (even - p) in primes:
-                pairs.append(f"{p} + {even - p}")
-        results[even] = " や ".join(pairs)
+def find_goldbach_pairs(even_number):
+    """找到将偶数分解为两个素数的所有可能组合"""
+    if even_number < 4 or even_number % 2 != 0:
+        return "请输入一个大于等于4的偶数。"
 
-    for even, pairs in results.items():
-        print(f"> {even} = {pairs}")
+    primes = sieve_of_eratosthenes(even_number)
+    pairs = []
 
-# 调用函数，输出结果
-goldbach_conjecture(100)
+    for prime in primes:
+        complement = even_number - prime
+        if complement in primes and prime <= complement:  # 只考虑一次组合
+            pairs.append((prime, complement))
+
+    return pairs
+
+
+# 示例使用
+even_number = 666666  # 可以更改为其他偶数
+result = find_goldbach_pairs(even_number)
+
+print(f"{even_number} 可以分解为以下两个素数的和：")
+for pair in result:
+    print(f"{pair[0]} + {pair[1]}")

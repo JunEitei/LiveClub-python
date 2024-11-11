@@ -11,4 +11,4 @@ def convert_ttf_to_woff2(input_file, output_file):
 
 
 # Example usage
-convert_ttf_to_woff2('Hina-Mincho-Regular.ttf', 'Hina-Mincho-Regular.woff2')
+convert_ttf_to_woff2('MochiyPopOne-Regular.ttf', 'MochiyPopOne-Regular.woff2')

@@ -12,7 +12,7 @@ files = [f for f in files if os.path.isfile(os.path.join(folder_path, f))]
 # 对文件进行排序（根据文件名或其他条件）
 files.sort()
 
-# 遍历文件并重命名
+# 遍历文件并重命名2
 for index, file in enumerate(files, start=1):
     # 获取文件扩展名
     ext = file.split('.')[-1]

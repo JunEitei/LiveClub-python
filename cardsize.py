@@ -51,4 +51,4 @@ for folder, size in folder_sizes.items():
     # content, music, photos, videos を含むフォルダは表示しない
     if any(exclude in folder for exclude in ['content', 'music', 'photos', 'videos']):
         continue
-    print(f"Folder: {folder} - Total Size: {size:.2f} MB")
+    print(f"ディーエルシー「{folder}」 - 合計サイズ: {size:.2f} MB")

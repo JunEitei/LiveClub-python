@@ -39,11 +39,12 @@ def get_total_size_of_folders(parent_folder):
 
     # 各フォルダのサイズをバイトからMBに変換する
     total_sizes_in_mb = {folder: size / (1024 * 1024) for folder, size in total_sizes.items()}
+
     return total_sizes_in_mb
 
 
 # サンプルの使い方
-parent_folder = "~/Downloads/mao/"
+# parent_folder = "~/Downloads/mao/"
 folder_sizes = get_total_size_of_folders(os.path.expanduser(parent_folder))
 
 # 条件に合った各フォルダのサイズを表示

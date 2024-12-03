@@ -1,0 +1,2557 @@
+{
+	"info": {
+		"_postman_id": "0ce6337f-091b-4c09-810c-a7fffdba7e9a",
+		"name": "D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36616989"
+	},
+	"item": [
+		{
+			"name": "https://syapi.mm8888.shop/im/App/videoConfig",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/App/videoConfig",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"App",
+						"videoConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/middle.Middle/get_list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/middle.Middle/get_list",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"middle.Middle",
+						"get_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/getUserInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/getUserInfo",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/chatList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/chatList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"chatList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/base",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/base",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"base"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/friendList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/friendList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"friendList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"agent",
+						"getOnlineList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/getUserbankList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/getUserbankList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"getUserbankList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/withdraw/getWithDrawConfig",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/withdraw/getWithDrawConfig",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"withdraw",
+						"getWithDrawConfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getUserCapitalList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "get",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "time",
+							"value": "4"
+						},
+						{
+							"key": "type",
+							"value": "1"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getUserCapitalList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getUserCapitalList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/getUserCapitalList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "get",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "time",
+							"value": "4"
+						},
+						{
+							"key": "type",
+							"value": "hongbao"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/getUserCapitalList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"getUserCapitalList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/getUserbankList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/getUserbankList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"getUserbankList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getAboutList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getAboutList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getAboutList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"agent",
+						"getOnlineList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/video.Share/category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/video.Share/category",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"video.Share",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/video.Share/video_lists",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "type",
+							"value": "4"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/video.Share/video_lists",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"video.Share",
+						"video_lists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/agent/getOnlineList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"agent",
+						"getOnlineList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/applyFriend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/applyFriend",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"applyFriend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/applyGroup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/applyGroup",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"applyGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "in",
+							"value": "0"
+						},
+						{
+							"key": "user_id",
+							"value": "32740"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/details",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/getListId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "user_id",
+							"value": "32740"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/getListId",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"getListId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/getListTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "66523003D1311EB53B6958E5AFDD5767"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/getListTime",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"getListTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/chatData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "is_up",
+							"value": "1"
+						},
+						{
+							"key": "list_id",
+							"value": "66523003D1311EB53B6958E5AFDD5767"
+						},
+						{
+							"key": "time",
+							"value": "0"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/chatData",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"chatData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getMemberPhotos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "66523003D1311EB53B6958E5AFDD5767"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getMemberPhotos",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getMemberPhotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/setListTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "66523003D1311EB53B6958E5AFDD5767"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/setListTime",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"setListTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getMemberList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "66523003D1311EB53B6958E5AFDD5767"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getMemberList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getMemberList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/base",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/base",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"base"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/user/myfavor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/user/myfavor",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"user",
+						"myfavor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/addGroup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "0"
+						},
+						{
+							"key": "users",
+							"value": "[\"32740\"]"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/addGroup",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"addGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/chatData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "is_up",
+							"value": "1"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						},
+						{
+							"key": "time",
+							"value": "0"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/chatData",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"chatData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/updataNoReader",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/updataNoReader",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"updataNoReader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/getListTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/getListTime",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"getListTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/chatData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "is_up",
+							"value": "1"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						},
+						{
+							"key": "time",
+							"value": "0"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/chatData",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"chatData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getMemberPhotos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getMemberPhotos",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getMemberPhotos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/message/setListTime",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/message/setListTime",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"message",
+						"setListTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/vendor/getMemberList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						},
+						{
+							"key": "list_id",
+							"value": "C928538D7CE3D635EDBFADB09718EDE5"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/vendor/getMemberList",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"vendor",
+						"getMemberList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/get/base",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/get/base",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"get",
+						"base"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://syapi.mm8888.shop/im/user/myfavor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "syapi.mm8888.shop"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "_agent_id",
+							"value": "1"
+						},
+						{
+							"key": "_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzMCwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzE5MDk0NSwiZXhwIjo3NzMzMTkwOTQ1LCJuYmYiOjE3MzMxOTA5NDUsInN1YiI6IiIsImp0aSI6ImZhODBjMzA4M2VjZWFlMjA2OTFmNTEyNmZlZDQxOGExIn0.nJwpriJgakSRgdrmy6dI2TNgxz9PImTKGNQsu25B9is"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://syapi.mm8888.shop/im/user/myfavor",
+					"protocol": "https",
+					"host": [
+						"syapi",
+						"mm8888",
+						"shop"
+					],
+					"path": [
+						"im",
+						"user",
+						"myfavor"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

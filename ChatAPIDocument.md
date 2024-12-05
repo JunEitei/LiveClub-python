@@ -8,11 +8,14 @@
 - [註冊](#reg)
 - [登陸](#login)
 
-**業務流程**
+**用戶相關**
 
 - [搜索用戶](#searchUser)
 - [獲取用戶基本信息](#base)
 - [獲取用戶個人信息](#getUserInfo)
+
+**系統相關**
+- [獲取系統動態菜單](#getList)
 
 
 
@@ -485,6 +488,68 @@ POST /im/get/getUserInfo
 <br>
 
 
+<a id="getList"></a>
+## 獲取系統動態菜單
+
+***Path***
+
+```
+POST /im/middle.Middle/get_list
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "total": 1,
+    "per_page": 15,
+    "current_page": 1,
+    "last_page": 1,
+    "data": [
+        {
+            "id": 7,
+            "name": "趣味",
+            "url": "https:\/\/www.kuhl.com",
+            "logo": "\/uploads\/20240913\/0b292fcb9aa2bdfd903d633414167b81.jpg",
+            "status": 1,
+            "createtime": 1726228888
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
 
 
 

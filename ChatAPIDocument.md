@@ -7,7 +7,7 @@
 - [註冊](#reg)
 - [登陸](#login)
 
-**用戶相關**
+**用戶功能**
 - [搜索好友](#searchUser)
 - [獲取用戶基本信息](#base)
 - [獲取用戶個人信息](#getUserInfo)
@@ -17,12 +17,14 @@
 - [獲取群驗證消息列表](#applyGroup)
 - [我的收藏](#getUserStore)
 - [我的收藏資源利用情況](#getStoreStatics)
+- [我的詳情](#details)
+
 
 **資金相關**
 - [充值](#userCharge)
 - [獲取銀行卡列表](#getUserbankList)
 - [獲取提現配置](#getWithDrawConfig)
-
+- [獲取帳單明細](#getUserCapitalList)
 
 **聊天功能**
 - [獲取聊天列表時間](#getListTime)
@@ -31,6 +33,7 @@
 - [獲取聊天收藏列表](#myfavor)
 - [獲取聊天成員頭像](#getMemberPhotos)
 - [獲取聊天內容](#chatData)
+- [獲取朋友圈內容](#circleData)
 
 
 **探索模塊**
@@ -2805,3 +2808,216 @@ POST /im/withdraw/getWithDrawConfig
     | 200 | 查詢成功 |
 
 <br>
+
+<a id="getUserCapitalList"></a>
+## 獲取帳單明細
+
+***Path***
+
+```
+POST /im/vendor/getUserCapitalList
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱     | 資料類型    | 必填 | 說明                        |
+	|----------|---------|----|---------------------------|
+ 	| _token   | String  | Y  | TOKEN                     |
+	| _agent_id | String  | Y  | 租戶id                      |
+ 	| page     | Integer | Y  | 頁數                        |
+	| type     | Integer | Y  | 類型，默認為1                   |
+ 	| get      | Integer | Y  | 1為收入2為支出                  |
+	| time | String  | Y  | 查詢時間4為近三個月1為本月2為上個月3為上上個月 |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	page: 1
+	type: 1
+	get: 1
+	time: 4
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "账单",
+    "data": {
+        "total": 0,
+        "per_page": 10,
+        "current_page": 1,
+        "last_page": 0,
+        "data": [],
+        "info": {
+            "amount": 0,
+            "user_money": "0.00"
+        },
+        "sql": "SELECT * FROM `txzh_capital_log` WHERE  `user_id` = 32835  AND `capital_type` IN (1,2,3,4,5,6)  AND `record_type` = 1  AND `create_time` >= 1730390400  AND `create_time` <= 1732982399 ORDER BY `id` DESC LIMIT 0,10"
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="circleData"></a>
+## 獲取朋友圈內容
+
+***Path***
+
+```
+POST /im/get/circleData
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明                        |
+	|-----------|---------|----|---------------------------|
+ 	| _token    | String  | Y  | TOKEN                     |
+	| _agent_id | String  | Y  | 租戶id                      |
+ 	| user_id   | Integer | Y  | 用戶id                      |
+	| type      | Integer | Y  | 類型，默認為0                   |
+	| time      | String  | Y  | 查詢時間4為近三個月1為本月2為上個月3為上上個月 |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	user_id: 1
+	type: 1
+	time: 4
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "success",
+    "data": {
+        "data": [],
+        "user_id": "0",
+        "user_info": {
+            "id": 32835,
+            "photo": "user\/32835\/190.jpg",
+            "nickname": "ffffff",
+            "circle_img": "default_circle_img.jpg?_v=1733387978",
+            "doodling": "本宝宝暂时还没有想到个性的签名"
+        }
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="details"></a>
+## 我的詳情
+
+***Path***
+
+```
+POST /im/get/details
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明                        |
+	|-----------|---------|----|---------------------------|
+ 	| _token    | String  | Y  | TOKEN                     |
+	| _agent_id | String  | Y  | 租戶id                      |
+ 	| user_id   | Integer | Y  | 用戶id                      |
+	| in      | Integer | Y  | 默認為0                   |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	user_id: 32835
+	in: 0
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "success",
+    "data": {
+        "user_id": 32835,
+        "nickname": "ffffff",
+        "username": "ffffff",
+        "is_friend": 1,
+        "doodling": "本宝宝暂时还没有想到个性的签名",
+        "photo": "user\/32835\/300.jpg",
+        "show_friend": {
+            "circle": [],
+            "phone": "ffffff"
+        },
+        "from": "搜索登陆名添加",
+        "content": "",
+        "sex": 1,
+        "apply_id": 0
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+

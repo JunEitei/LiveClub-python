@@ -3,13 +3,11 @@
 ## 目錄
 
 **註冊流程**
-
 - [頭像上傳](#photo)
 - [註冊](#reg)
 - [登陸](#login)
 
 **用戶相關**
-
 - [搜索好友](#searchUser)
 - [獲取用戶基本信息](#base)
 - [獲取用戶個人信息](#getUserInfo)
@@ -17,6 +15,17 @@
 - [獲取好友列表](#friendList)
 - [獲取新朋友列表](#applyFriend)
 - [獲取群驗證消息列表](#applyGroup)
+- [我的收藏](#getUserStore)
+- [我的收藏資源利用情況](#getStoreStatics)
+- 
+**聊天功能**
+- [獲取聊天列表時間](#getListTime)
+- [設置聊天列表時間](#setListTime)
+- [獲取聊天成員列表](#getMemberList)
+- [獲取聊天收藏列表](#myfavor)
+- [獲取聊天成員頭像](#getMemberPhotos)
+- [獲取聊天內容](#chatData)
+
 
 **探索模塊**
 - [獲取短視頻分類列表](#videoCategory)
@@ -33,6 +42,9 @@
 - [獲取探索界面自定義菜單](#getOnlineList)
 - [獲取系統配置](#getConfig)
 - [幫助中心文章列表](#getArticleList)
+- [幫助中心文章詳情](#getArticleDetail)
+- [客服](#kefu)
+
 
 
 <br>
@@ -1834,6 +1846,546 @@ POST /im/vendor/getArticleList
             "sort": 6
         }
     ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="getArticleDetail"></a>
+## 幫助中心文章詳情
+
+***Path***
+
+```
+POST /im/vendor/getArticleDetail
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| --- |---------|----|-------|
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+ 	| article_id | Integer | Y  | 文章id  |
+
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	article_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": {
+        "id": 22,
+        "article_name": "二二",
+        "article_desc": "二3我",
+        "content": "<p>厄尔而威尔<\/p>",
+        "status": 1,
+        "position": "帮助文档",
+        "create_time": "2024-05-08 22:39:19",
+        "update_time": "1970-01-01 08:00:00",
+        "small_pic": "\/uploads\/2024-05-08\/20240508\/17151791571677.jpg",
+        "sort": 0
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="getUserStore"></a>
+## 我的收藏
+
+***Path***
+
+```
+POST /im/vendor/getUserStore
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明                       |
+	| --- |---------|----|--------------------------|
+ 	| _token | String  | Y  | TOKEN                    |
+	| _agent_id | String  | Y  | 租戶id                     |
+ 	| type | Integer | Y  | 收藏分類（0全部1視頻2語音3圖片4文字5文件） |
+
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	type: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": {
+        "total": 0,
+        "per_page": 10,
+        "current_page": 1,
+        "last_page": 0,
+        "data": [],
+        "info": {
+            "user_storge_count": 0,
+            "user_storge": "0B",
+            "max_count": 20000,
+            "max_storge": "30GB",
+            "user_info": {
+                "id": 32835,
+                "username": "ffffff",
+                "nickname": "ffffff",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "ffffff",
+                "sex": 1,
+                "password": "96e79218965eb72c92a549dd5a330112",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1733366324,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1733366324,
+                "client_id": "",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "128.22.165.211",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 0,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "user\/32835\/300.jpg",
+                "photo": "user\/32835\/300.jpg"
+            }
+        }
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="getStoreStatics"></a>
+## 我的收藏資源利用情況
+
+***Path***
+
+```
+POST /im/vendor/getStoreStatics
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明                       |
+	| --- |---------|----|--------------------------|
+ 	| _token | String  | Y  | TOKEN                    |
+	| _agent_id | String  | Y  | 租戶id                     |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": {
+        "list": {
+            "s1": "0B",
+            "c1": 0,
+            "s2": "0B",
+            "c2": 0,
+            "s3": "0B",
+            "c3": 0,
+            "s4": "0B",
+            "c4": 0,
+            "s11": "0B",
+            "c11": 0
+        },
+        "info": {
+            "user_storge_count": 0,
+            "user_storge": "0B",
+            "max_storge": 32212254720,
+            "max_count": 20000,
+            "rate_1": 0,
+            "rate_2": 0,
+            "splus_storge": "30GB",
+            "splus_count": "20000"
+        }
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="kefu"></a>
+## 客服
+
+***Path***
+
+```
+POST /im/get/kefu
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明                       |
+	| --- |---------|----|--------------------------|
+ 	| _token | String  | Y  | TOKEN                    |
+	| _agent_id | String  | Y  | 租戶id                     |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"code":1,"data":"120de41dad9e422bda064059ba82ffa5"}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="setListTime"></a>
+## 設置聊天列表時間
+
+***Path***
+
+```
+POST /im/message/setListTime
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明     |
+	|-----------|---------|----|--------|
+ 	| _token    | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+	| list_id   | String  | Y  | 聊天列表id |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	list_id: 120de41dad9e422bda064059ba82ffa5
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"msg":"success"}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="myfavor"></a>
+## 獲取聊天收藏列表
+
+***Path***
+
+```
+POST /im/user/myfavor
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明     |
+	|-----------|---------|----|--------|
+ 	| _token    | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	[]
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="getMemberPhotos"></a>
+## 獲取聊天成員頭像
+
+***Path***
+
+```
+POST /im/vendor/getMemberPhotos
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明     |
+	|-----------|---------|----|--------|
+ 	| _token    | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+ 	| list_id   | String  | Y  | 聊天列表id |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	list_id: 120de41dad9e422bda064059ba82ffa5
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": [
+        {
+            "user_id": 32752,
+            "id": "67515d38b80e9f52726f81fa",
+            "photo": "user\/32752\/300.jpg"
+        },
+        {
+            "user_id": 32835,
+            "id": "67515d38b80e9f52726f81fb",
+            "photo": "user\/32835\/300.jpg"
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="chatData"></a>
+## 獲取聊天內容
+
+***Path***
+
+```
+POST /im/get/chatData
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型      | 必填 | 說明     |
+	|-----------|-----------|----|--------|
+ 	| _token    | String    | Y  | TOKEN  |
+	| _agent_id | String    | Y  | 租戶id   |
+ 	| list_id   | String    | Y  | 聊天列表id |
+  	| time   | Timestamp | Y  | 時間戳    |
+ 	| is_up   | Boolean   | Y  | 是否置頂   |
+
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	list_id: 120de41dad9e422bda064059ba82ffa5
+	time: 1733385639
+	is_up: 0
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "data": {
+        "stime": "2024-12-05 16:09:54",
+        "etime": "2024-12-05 16:09:54",
+        "ip": "223.88.95.223",
+        "region": "",
+        "list_id": "120de41dad9e422bda064059ba82ffa5",
+        "type": 0,
+        "show_name": "siyu_vUhHBf",
+        "list": [],
+        "is_msg": 0,
+        "is_action": 1,
+        "obj_id": 32752,
+        "online": 0,
+        "last_login": "1729919861",
+        "receive_list": []
+    }
 	}
 	```
 - ***Status code***

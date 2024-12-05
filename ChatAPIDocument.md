@@ -10,7 +10,7 @@
 
 **用戶相關**
 
-- [搜索用戶](#searchUser)
+- [搜索好友](#searchUser)
 - [獲取用戶基本信息](#base)
 - [獲取用戶個人信息](#getUserInfo)
 - [獲取聊天列表](#chatList)

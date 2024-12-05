@@ -18,10 +18,22 @@
 - [獲取新朋友列表](#applyFriend)
 - [獲取群驗證消息列表](#applyGroup)
 
+**探索模塊**
+- [獲取短視頻分類列表](#videoCategory)
+- [獲取短視頻列表](#videoLists)
+- [獲取短視頻指定用戶信息](#videoUserinfo)
+- [獲取短視頻指定用戶作品列表](#videoUservideo)
+- [獲取短視頻指定用戶喜歡列表](#videoFav)
+- [獲取短視頻指定用戶評論列表](#videoCommonlog)
+
+
 **系統相關**
 - [獲取系統動態菜單](#getList)
 - [獲取視頻配置](#videoConfig)
 - [獲取探索界面自定義菜單](#getOnlineList)
+
+- 
+- /im/video.Share/category
 
 
 <br>
@@ -848,5 +860,805 @@ POST /im/agent/getOnlineList
 <br>
 
 
+<a id="videoCategory"></a>
+## 獲取短視頻分類列表
+
+***Path***
+
+```
+POST /im/video.Share/category
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	[{"id":4,"name":"life"},{"id":16,"name":"news"}]
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
 
 
+
+
+<a id="videoCategory"></a>
+## 獲取短視頻列表
+
+***Path***
+
+```
+POST /im/video.Share/video_lists
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明     |
+	| --- |---------|----|--------|
+ 	| _token | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+  	| page | Integer | Y  | 當前頁碼   |
+	| type | Integer  | Y  | 視頻分類id |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	page: 4
+    type: 0
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "total": 6,
+    "per_page": 15,
+    "current_page": "1",
+    "last_page": 1,
+    "data": [
+        {
+            "id": 31,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089354,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 32814,
+                "username": "swee99999",
+                "nickname": "123654",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "swee99999",
+                "sex": 0,
+                "password": "1ac633444cb5eb9cf03ab1f911732480",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1732087726,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1732091770,
+                "client_id": "7f00000113240000068b",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "103.120.122.253",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 11376,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "user\/32814\/300.jpg",
+                "photo": "user\/32814\/300.jpg"
+            }
+        },
+        {
+            "id": 30,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089353,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 32814,
+                "username": "swee99999",
+                "nickname": "123654",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "swee99999",
+                "sex": 0,
+                "password": "1ac633444cb5eb9cf03ab1f911732480",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1732087726,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1732091770,
+                "client_id": "7f00000113240000068b",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "103.120.122.253",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 11376,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "user\/32814\/300.jpg",
+                "photo": "user\/32814\/300.jpg"
+            }
+        },
+        {
+            "id": 29,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089349,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 32814,
+                "username": "swee99999",
+                "nickname": "123654",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "swee99999",
+                "sex": 0,
+                "password": "1ac633444cb5eb9cf03ab1f911732480",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1732087726,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1732091770,
+                "client_id": "7f00000113240000068b",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "103.120.122.253",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 11376,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "user\/32814\/300.jpg",
+                "photo": "user\/32814\/300.jpg"
+            }
+        },
+        {
+            "id": 28,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089342,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 32814,
+                "username": "swee99999",
+                "nickname": "123654",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "swee99999",
+                "sex": 0,
+                "password": "1ac633444cb5eb9cf03ab1f911732480",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1732087726,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1732091770,
+                "client_id": "7f00000113240000068b",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "103.120.122.253",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 11376,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "user\/32814\/300.jpg",
+                "photo": "user\/32814\/300.jpg"
+            }
+        },
+        {
+            "id": 27,
+            "user_id": 32764,
+            "title": "2233",
+            "video": "\/static\/video\/32764\/20241101\/6d1e5819262694a5f05e2bf4034ae5be.MOV",
+            "gif": "\/static\/video\/32764\/20241101\/6d1e5819262694a5f05e2bf4034ae5be.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1730441541,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 32764,
+                "username": "18888888889",
+                "nickname": "张三",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "18888888889",
+                "sex": 0,
+                "password": "e10adc3949ba59abbe56e057f20f883e",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1730439457,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1730439457,
+                "client_id": "",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "112.1.169.64",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 0,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "default_man\/300.jpg",
+                "photo": "default_man\/300.jpg"
+            }
+        },
+        {
+            "id": 26,
+            "user_id": 30426,
+            "title": "6666666666",
+            "video": "\/static\/video\/30426\/20240623\/2fd53cac2c346e45fc3b9f72621fad10.mp4",
+            "gif": "\/static\/video\/30426\/20240623\/2fd53cac2c346e45fc3b9f72621fad10.jpeg",
+            "fabulous": 4,
+            "comment": 3,
+            "createtime": 1719132525,
+            "status": "1",
+            "category_id": 4,
+            "is_fabulous": false,
+            "is_follow": false,
+            "user_info": {
+                "id": 30426,
+                "username": "666666",
+                "nickname": "666666",
+                "doodling": "本宝宝暂时还没有想到个性的签名",
+                "email": "",
+                "phone": "666666",
+                "sex": 1,
+                "password": "96e79218965eb72c92a549dd5a330112",
+                "trade_password": "",
+                "money": "0.00",
+                "freeze_money": "0.00",
+                "point": 0,
+                "type": 1,
+                "status": 0,
+                "create_time": 1719073586,
+                "circli_img": "",
+                "is_customer_service": 0,
+                "agent_id": 1,
+                "update_time": 1719073586,
+                "client_id": "7f0000011324000005e4",
+                "q_permition": 1,
+                "tj_username": "",
+                "ip": "203.160.80.7",
+                "ip_cityname": "",
+                "ip_status": 0,
+                "phone_status": 0,
+                "phone_type": 0,
+                "is_robot": 0,
+                "storge": 0,
+                "default_friend_id": 0,
+                "channel": "",
+                "last_login": null,
+                "invite_list": null,
+                "face": "default_woman\/300.jpg",
+                "photo": "default_woman\/300.jpg"
+            }
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+
+<a id="videoCategory"></a>
+## 獲取短視頻分類列表
+
+***Path***
+
+```
+POST /im/video.Share/category
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	[{"id":4,"name":"life"},{"id":16,"name":"news"}]
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="videoUserinfo"></a>
+## 獲取短視頻指定用戶信息
+
+***Path***
+
+```
+POST /im/video.Share/user_info
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明     |
+	| --- |---------|----|--------|
+ 	| _token | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+ 	| user_id | Integer | Y  | 指定用戶id |
+
+
+	***範例***
+
+	```Form Data
+	user_id: 32814
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "user_info": {
+        "id": 32814,
+        "username": "swee99999",
+        "nickname": "123654",
+        "doodling": "本宝宝暂时还没有想到个性的签名",
+        "email": "",
+        "phone": "swee99999",
+        "sex": 0,
+        "password": "1ac633444cb5eb9cf03ab1f911732480",
+        "trade_password": "",
+        "money": "0.00",
+        "freeze_money": "0.00",
+        "point": 0,
+        "type": 1,
+        "status": 0,
+        "create_time": 1732087726,
+        "circli_img": "",
+        "is_customer_service": 0,
+        "agent_id": 1,
+        "update_time": 1732091770,
+        "client_id": "7f00000113240000068b",
+        "q_permition": 1,
+        "tj_username": "",
+        "ip": "103.120.122.253",
+        "ip_cityname": "",
+        "ip_status": 0,
+        "phone_status": 0,
+        "phone_type": 0,
+        "is_robot": 0,
+        "storge": 11376,
+        "default_friend_id": 0,
+        "channel": "",
+        "last_login": null,
+        "invite_list": null,
+        "face": "user\/32814\/300.jpg",
+        "photo": "user\/32814\/300.jpg"
+    },
+    "follow": 0,
+    "fans": 0,
+    "fabulous": 0
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="videoUservideo"></a>
+## 獲取短視頻指定用戶作品列表
+
+***Path***
+
+```
+POST /im/video.Share/user_video
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明     |
+	| --- |---------|----|--------|
+ 	| _token | String  | Y  | TOKEN  |
+	| _agent_id | String  | Y  | 租戶id   |
+ 	| user_id | Integer | Y  | 指定用戶id |
+
+
+	***範例***
+
+	```Form Data
+	user_id: 32814
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "total": 4,
+    "per_page": 15,
+    "current_page": "1",
+    "last_page": 1,
+    "data": [
+        {
+            "id": 31,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089354,
+            "status": "1",
+            "category_id": 4
+        },
+        {
+            "id": 30,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089353,
+            "status": "1",
+            "category_id": 4
+        },
+        {
+            "id": 29,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089349,
+            "status": "1",
+            "category_id": 4
+        },
+        {
+            "id": 28,
+            "user_id": 32814,
+            "title": "1234",
+            "video": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.mp4",
+            "gif": "\/static\/video\/32814\/20241120\/3698ee78092aa88f27e89dbe4eb6ddd7.jpeg",
+            "fabulous": 0,
+            "comment": 0,
+            "createtime": 1732089342,
+            "status": "1",
+            "category_id": 4
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="videoFav"></a>
+## 獲取短視頻指定用戶喜歡列表
+
+***Path***
+
+```
+POST /im/video.Share/fabulous_log
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| --- |---------|----|-------|
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+ 	| user_id | Integer | Y  | 指定用戶id |
+  	| page | Integer | N  | 當前頁   |
+
+
+
+	***範例***
+
+	```Form Data
+	user_id: 32814
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	page: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"total":0,"per_page":15,"current_page":1,"last_page":0,"data":[]}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="videoCommonlog"></a>
+## 獲取短視頻指定用戶評論列表
+
+***Path***
+
+```
+POST /im/video.Share/common_log
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| --- |---------|----|-------|
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+ 	| user_id | Integer | Y  | 指定用戶id |
+  	| page | Integer | N  | 當前頁   |
+
+
+
+	***範例***
+
+	```Form Data
+	user_id: 32814
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	page: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "total": 2,
+    "per_page": 15,
+    "current_page": "1",
+    "last_page": 1,
+    "data": [
+        {
+            "id": 34,
+            "share_id": 26,
+            "user_id": 32811,
+            "comment_id": 0,
+            "to_id": 0,
+            "content": "667",
+            "createtime": 1732092530,
+            "gif": "\/static\/video\/30426\/20240623\/2fd53cac2c346e45fc3b9f72621fad10.jpeg"
+        },
+        {
+            "id": 33,
+            "share_id": 26,
+            "user_id": 30426,
+            "comment_id": 0,
+            "to_id": 0,
+            "content": "666",
+            "createtime": 1719133289,
+            "gif": "\/static\/video\/30426\/20240623\/2fd53cac2c346e45fc3b9f72621fad10.jpeg"
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>

@@ -17,7 +17,12 @@
 - [獲取群驗證消息列表](#applyGroup)
 - [我的收藏](#getUserStore)
 - [我的收藏資源利用情況](#getStoreStatics)
+
+**資金相關**
 - [充值](#userCharge)
+- [獲取銀行卡列表](#getUserbankList)
+- [獲取提現配置](#getWithDrawConfig)
+
 
 **聊天功能**
 - [獲取聊天列表時間](#getListTime)
@@ -2655,3 +2660,148 @@ POST /im/pay/userCharge
  	charge_type: 1
  	amount: 100
 	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":1,"msg":"您点击太快啦","data":[]}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="getUserbankList"></a>
+## 獲取銀行卡列表
+
+***Path***
+
+```
+POST /im/get/getUserbankList
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱     | 資料類型    | 必填 | 說明         |
+	|----------|---------|----|------------|
+ 	| _token   | String  | Y  | TOKEN      |
+	| _agent_id | String  | Y  | 租戶id       |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"msg":"银行卡列表","data":[]}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="getWithDrawConfig"></a>
+## 獲取提現配置
+
+***Path***
+
+```
+POST /im/withdraw/getWithDrawConfig
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱     | 資料類型    | 必填 | 說明         |
+	|----------|---------|----|------------|
+ 	| _token   | String  | Y  | TOKEN      |
+	| _agent_id | String  | Y  | 租戶id       |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "config",
+    "data": {
+        "user_default_friend": "32668|32740",
+        "user_default_friend_changer": "0",
+        "user_default_friend_random": "0",
+        "user_default_friend_speak": "hello",
+        "user_default_kefu_friend_speak": "hello",
+        "user_create_group": "0",
+        "user_withdraw_status": "1",
+        "user_invite_status": "1",
+        "system_invite_status": "0",
+        "user_limit_tourist": "1",
+        "disappear_after_read": "1",
+        "disappear_delay_time": "3",
+        "user_min_withdraw": "98",
+        "user_max_withdraw": "10000",
+        "user_day_withdraw_times": "3",
+        "user_withdraw_fee": "0.03",
+        "user_push_appid": "4GILmHOXwU7YOEyRws8nj2",
+        "user_push_appKey": "dBjOm7uF739PflFfQDwKsA",
+        "user_push_masterSecret": "BavYIGWTro8zOem6qyMKw1",
+        "user_limit_ip": "999",
+        "tourist_prefix": "siyu_",
+        "pc_page_title": "IM",
+        "admin_page_title": "管理后台",
+        "key": "basic_config",
+        "tab_id": "1"
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>

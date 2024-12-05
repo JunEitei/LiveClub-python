@@ -2,22 +2,19 @@
 
 ## 目錄
 
+**註冊流程**
+
 - [頭像上傳](#photo)
 - [註冊](#reg)
 - [登陸](#login)
 
-**使用者**
+**業務流程**
 
 - [搜索用戶](#searchUser)
-- [獲取我的信息](#base)
+- [獲取用戶基本信息](#base)
+- [獲取用戶個人信息](#getUserInfo)
 
-**應用程式**
 
-- [建立應用程式](#createProject)
-- [查詢應用程式列表](#queryProject)
-- [查詢應用程式詳情](#queryProjectByID)
-- [重置MasterSecret](#editProject)
-- [刪除應用程式](#deleteProject)
 
 <br>
 
@@ -238,7 +235,7 @@ POST /im/get/searchUser
 
 
 <a id="base"></a>
-## 獲取我的信息
+## 獲取用戶基本信息
 
 ***Path***
 
@@ -311,8 +308,181 @@ POST /im/get/base
 
 <br>
 
+<a id="getUserInfo"></a>
+## 獲取用戶個人信息
 
+***Path***
 
+```
+POST /im/get/getUserInfo
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "success",
+    "data": {
+        "id": 32835,
+        "username": "ffffff",
+        "nickname": "ffffff",
+        "doodling": "本宝宝暂时还没有想到个性的签名",
+        "email": "",
+        "phone": "ffffff",
+        "sex": 1,
+        "password": "96e79218965eb72c92a549dd5a330112",
+        "trade_password": "",
+        "money": "0.00",
+        "freeze_money": "0.00",
+        "point": 0,
+        "type": 1,
+        "status": 0,
+        "create_time": 1733366324,
+        "circli_img": "",
+        "is_customer_service": 0,
+        "agent_id": 1,
+        "update_time": 1733366324,
+        "client_id": "",
+        "q_permition": 1,
+        "tj_username": "",
+        "ip": "128.22.165.211",
+        "ip_cityname": "",
+        "ip_status": 0,
+        "phone_status": 0,
+        "phone_type": 0,
+        "is_robot": 0,
+        "storge": 0,
+        "default_friend_id": 0,
+        "channel": "",
+        "last_login": null,
+        "invite_list": null,
+        "face": "user\/32835\/300.jpg",
+        "photo": "user\/32835\/300.jpg"
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="getUserInfo"></a>
+## 獲取用戶個人信息
+
+***Path***
+
+```
+POST /im/get/getUserInfo
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "success",
+    "data": {
+        "id": 32835,
+        "username": "ffffff",
+        "nickname": "ffffff",
+        "doodling": "本宝宝暂时还没有想到个性的签名",
+        "email": "",
+        "phone": "ffffff",
+        "sex": 1,
+        "password": "96e79218965eb72c92a549dd5a330112",
+        "trade_password": "",
+        "money": "0.00",
+        "freeze_money": "0.00",
+        "point": 0,
+        "type": 1,
+        "status": 0,
+        "create_time": 1733366324,
+        "circli_img": "",
+        "is_customer_service": 0,
+        "agent_id": 1,
+        "update_time": 1733366324,
+        "client_id": "",
+        "q_permition": 1,
+        "tj_username": "",
+        "ip": "128.22.165.211",
+        "ip_cityname": "",
+        "ip_status": 0,
+        "phone_status": 0,
+        "phone_type": 0,
+        "is_robot": 0,
+        "storge": 0,
+        "default_friend_id": 0,
+        "channel": "",
+        "last_login": null,
+        "invite_list": null,
+        "face": "user\/32835\/300.jpg",
+        "photo": "user\/32835\/300.jpg"
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
 
 
 

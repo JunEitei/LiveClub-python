@@ -32,6 +32,7 @@
 - [獲取視頻配置](#videoConfig)
 - [獲取探索界面自定義菜單](#getOnlineList)
 - [獲取系統配置](#getConfig)
+- [幫助中心文章列表](#getArticleList)
 
 
 <br>
@@ -1741,4 +1742,105 @@ POST /im/App/config
 
 <br>
 
+<a id="getArticleList"></a>
+## 幫助中心文章列表
+
+***Path***
+
+```
+POST /im/vendor/getArticleList
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| --- |---------|----|-------|
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": [
+        {
+            "id": 22,
+            "article_name": "二二",
+            "article_desc": "二3我",
+            "content": "<p>厄尔而威尔<\/p>",
+            "status": 1,
+            "position": "帮助文档",
+            "create_time": "2024-05-08 22:39:19",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2024-05-08\/20240508\/17151791571677.jpg",
+            "sort": 0
+        },
+        {
+            "id": 20,
+            "article_name": "111",
+            "article_desc": "111",
+            "content": "",
+            "status": 1,
+            "position": "帮助文档",
+            "create_time": "2020-09-26 01:34:32",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804940493525.jpg",
+            "sort": 0
+        },
+        {
+            "id": 19,
+            "article_name": "222",
+            "article_desc": "222",
+            "content": "",
+            "status": 1,
+            "position": "帮助文档",
+            "create_time": "2020-09-26 01:33:33",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804940709877.jpg",
+            "sort": 0
+        },
+        {
+            "id": 21,
+            "article_name": "666",
+            "article_desc": "666",
+            "content": "<p>666999<\/p>",
+            "status": 1,
+            "position": "帮助文档",
+            "create_time": "2022-07-10 22:11:31",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804941247728.jpg",
+            "sort": 6
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
 

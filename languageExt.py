@@ -1,5 +1,6 @@
 import os
 
+
 def add_language_suffix(folder_path, suffix):
     # 遍历指定文件夹
     for filename in os.listdir(folder_path):
@@ -13,6 +14,7 @@ def add_language_suffix(folder_path, suffix):
             # 重命名文件
             os.rename(old_file_path, new_file_path)
             print(f'Renamed: {old_file_path} -> {new_file_path}')
+
 
 # 指定文件夹路径和后缀
 folder_path = 'Posts_sp'  # 替换为你的文件夹路径

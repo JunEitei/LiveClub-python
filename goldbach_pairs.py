@@ -15,7 +15,6 @@ def find_goldbach_pairs(even_number):
         return "4以上の偶数を入力してや。"
 
     primes = sieve_of_eratosthenes(even_number)
-
     #
     for prime in primes:
         complement = even_number - prime

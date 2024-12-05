@@ -8,7 +8,7 @@
 
 **使用者**
 
-- [查詢使用者資訊](#queryUser)
+- [搜索用戶](#searchUser)
 - [變更使用者密碼](#editUser)
 
 **應用程式**
@@ -195,13 +195,13 @@ POST /im/in/login
 <br>
 
 
-<a name="queryUser"></a>
-## 查詢使用者資訊
+<a name="searchUser"></a>
+## 搜索好友
 
 ***Path***
 
 ```
-GET /api/v1/manage/user
+POST /im/get/searchUser
 ```
 
 <br>
@@ -209,10 +209,23 @@ GET /api/v1/manage/user
 ***Request***
 
 - ***Header***
+	無
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| Authorization | String | Y | JWT認證機制，登入回傳的 auth, 前面加上 Bearer |
+- ***Body (JSON)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+	| val | String | Y  | 搜索關鍵字 |
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	val: f
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
 	
 <br>
 
@@ -220,22 +233,16 @@ GET /api/v1/manage/user
     
 - ***Body (JSON)***
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| id | String | Y | 使用者唯一識別碼 |
-	| account | String | Y | 帳號 |
-	| updateDate | Timestamp(秒) | Y | 最後更新時間 |
-	| createDate | Timestamp(秒) | Y | 建立時間 |
+	| 參數名稱 | 資料類型   | 必填 | 說明   |
+	| --- |--------| --- |------|
+	| err | String | Y | 錯誤碼  |
+	| msg | String | Y | 提示消息 |
+	| data | JSON   | Y | 具體內容 |
 
 	***範例***
 
 	```json
-	{
-		"id": "XXXXXX-XXXXXX-XXXXXXX-XXXXXX",
-		"account": "mail@mail.com",
-		"updateDate": 1234567890,
-		"createDate": 1234567890
-	}
+{"err":0,"msg":"success","data":{"data":[],"is_type":0}}
 	```
 
 - ***Status code***

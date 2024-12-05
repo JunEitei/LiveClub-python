@@ -26,7 +26,7 @@
 - [獲取提現配置](#getWithDrawConfig)
 - [獲取帳單明細](#getUserCapitalList)
 
-**聊天功能**
+**聊天和朋友圈**
 - [獲取聊天列表時間](#getListTime)
 - [設置聊天列表時間](#setListTime)
 - [獲取聊天成員列表](#getMemberList)
@@ -34,7 +34,8 @@
 - [獲取聊天成員頭像](#getMemberPhotos)
 - [獲取聊天內容](#chatData)
 - [獲取朋友圈內容](#circleData)
-
+- [發朋友圈](#sendMsg)
+- [刪除朋友圈](#del)
 
 **探索模塊**
 - [獲取短視頻分類列表](#videoCategory)
@@ -2929,13 +2930,34 @@ POST /im/get/circleData
     "err": 0,
     "msg": "success",
     "data": {
-        "data": [],
+        "data": [
+            {
+                "post_id": "67516842ebead2702c48df24",
+                "uid": 32835,
+                "type": 0,
+                "username": "ffffff",
+                "header_image": "user\/32835\/300.jpg",
+                "can_pay_times": 0,
+                "pay_info": "[]",
+                "pay_amount": 0,
+                "can_pay": 0,
+                "content": {
+                    "text": "fd",
+                    "value": []
+                },
+                "islike": 0,
+                "like": [],
+                "comments": [],
+                "time": 1733388353,
+                "timestamp": "刚刚"
+            }
+        ],
         "user_id": "0",
         "user_info": {
             "id": 32835,
             "photo": "user\/32835\/190.jpg",
             "nickname": "ffffff",
-            "circle_img": "default_circle_img.jpg?_v=1733387978",
+            "circle_img": "default_circle_img.jpg?_v=1733388354",
             "doodling": "本宝宝暂时还没有想到个性的签名"
         }
     }
@@ -3021,3 +3043,156 @@ POST /im/get/details
 
 <br>
 
+
+
+<a id="sendMsg"></a>
+## 發朋友圈
+
+***Path***
+
+```
+POST /im/circle/sendMsg
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型   | 必填 | 說明      |
+	|-----------|--------|----|---------|
+ 	| _token    | String | Y  | TOKEN   |
+	| _agent_id | String | Y  | 租戶id    |
+ 	| content   | Json   | Y  | 發送的圖文內容 |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	content: {"text":"fd","value":[]}
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"msg":"success","data":{"circle_id":"67516842ebead2702c48df24"}}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="sendMsg"></a>
+## 發朋友圈
+
+***Path***
+
+```
+POST /im/circle/sendMsg
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型   | 必填 | 說明      |
+	|-----------|--------|----|---------|
+ 	| _token    | String | Y  | TOKEN   |
+	| _agent_id | String | Y  | 租戶id    |
+ 	| content   | Json   | Y  | 發送的圖文內容 |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	content: {"text":"fd","value":[]}
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"msg":"success","data":{"circle_id":"67516842ebead2702c48df24"}}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="del"></a>
+## 刪除朋友圈
+
+***Path***
+
+```
+POST /im/circle/del
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型    | 必填 | 說明        |
+	|-----------|---------|----|-----------|
+ 	| _token    | String  | Y  | TOKEN     |
+	| _agent_id | String  | Y  | 租戶id      |
+ 	| id   | Integer | Y  | 待刪除朋友圈的id |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	id: 111
+	```
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"code":0,"msg":"成功"}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>

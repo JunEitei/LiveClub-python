@@ -17,7 +17,8 @@
 - [獲取群驗證消息列表](#applyGroup)
 - [我的收藏](#getUserStore)
 - [我的收藏資源利用情況](#getStoreStatics)
-- 
+- [充值](#userCharge)
+
 **聊天功能**
 - [獲取聊天列表時間](#getListTime)
 - [設置聊天列表時間](#setListTime)
@@ -46,6 +47,7 @@
 - [客服](#kefu)
 - [關於我們列表](#getAboutList)
 - [關於我們列表文章詳情](#getAboutDetail)
+- [修改密碼](#password)
 
 
 <br>
@@ -2557,3 +2559,99 @@ POST /im/vendor/getAboutDetail
     | 200 | 查詢成功 |
 
 <br>
+
+<a id="password"></a>
+## 修改密碼
+
+***Path***
+
+```
+POST /im/set/password
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱   | 資料類型      | 必填 | 說明    |
+	|--------|-----------|----|-------|
+ 	| _token | String    | Y  | TOKEN |
+	| _agent_id | String    | Y  | 租戶id  |
+ 	| article_id | String    | Y  | 文章id  |
+ 	| pass1  | String    | Y  | 舊密碼   |
+	| pass2 | String    | Y  | 新密碼   |
+ 	| pass3 | String    | Y  | 新密碼確認 |
+
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	article_id: 1
+	pass1: 111111
+	pass2: 222222
+	pass3: 222222
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":1,"msg":"旧密码错误","data":""}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+
+<a id="userCharge"></a>
+## 充值
+
+***Path***
+
+```
+POST /im/pay/userCharge
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱     | 資料類型    | 必填 | 說明         |
+	|----------|---------|----|------------|
+ 	| _token   | String  | Y  | TOKEN      |
+	| _agent_id | String  | Y  | 租戶id       |
+	| charge_type | Integer | Y  | 充值類型，1為支付寶 |
+	| amount | Integer | Y  | 充值金額       |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+ 	charge_type: 1
+ 	amount: 100
+	```

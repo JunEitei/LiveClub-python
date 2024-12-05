@@ -21,8 +21,7 @@
 **系統相關**
 - [獲取系統動態菜單](#getList)
 - [獲取視頻配置](#videoConfig)
-
-
+- [獲取探索界面自定義菜單](#getOnlineList)
 
 
 <br>
@@ -782,121 +781,64 @@ POST /im/get/applyGroup
 <br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a id="queryDevices"></a>
-## 查詢已註冊裝置清單
-
-查詢已註冊的裝置清單
+<a id="getOnlineList"></a>
+## 獲取探索界面自定義菜單
 
 ***Path***
 
 ```
-GET /api/v1/manage/device/{projectID}
+POST /im/agent/getOnlineList
 ```
+
 <br>
 
 ***Request***
 
 - ***Header***
+	無
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| Authorization | String | Y | JWT認證機制，登入回傳的 auth, 前面加上 Bearer |
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
 	
 <br>
 
-- ***Path Parameters***
-
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| projectID | String | Y | 專案唯一識別碼 |
-
-<br>
-
-- ***Query Parameters***
-
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| platform | String | N | 平台 |
-	| deviceID | String | N | 推播裝置的唯一識別碼 |
-	| token | Bool | N | 推播Token |
-	| bundleID | String | N | App唯一識別碼 |
-	| version | String | N | SDK版本號 |
-	| appVersion | String | N | App版本號 |
-	| deviceBrand | String | N | 裝置廠牌 |
-	| deviceModel | String | N | 裝置型號 |
-	| osVersion | String | N | 裝置系統版本 |
-	| limit | Int | N | 資料筆數 (1-300)，預設100 |
-	| startDate | Timestamp(秒) | N | 起始時間 |
-	| endDate | Timestamp(秒) | N | 結束時間 |
-
-<br>
-
 ***Response***
-
+    
 - ***Body (JSON)***
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| id | String | Y | 唯一識別碼 |
-	| deviceID | String | Y | 推播裝置的唯一識別碼 |
-	| platform | String | Y | 平台 |
-	| token | Bool | Y | 推播Token |
-	| bundleID | String | Y | App唯一識別碼 |
-	| version | String | Y | SDK版本號 |
-	| appVersion | String | Y | App版本號 |
-	| deviceBrand | String | Y | 裝置廠牌 |
-	| deviceModel | String | Y | 裝置型號 |
-	| osVersion | String | Y | 裝置系統版本 |
-	| updateDate | Timestamp(秒) | Y | 更新時間 |
-	| createDate | Timestamp(秒) | Y | 建立時間 |
-
-- ***範例***
-
+	***範例***
 	```json
-	[
-		{
-			"id":"XXXX-XXXX-XXXX-XXXX",
-			"deviceID":"XXXX-XXXX-XXXX-XXXX",
-			"platform":"ios",
-			"token": "XXXX-XXXX-XXXX-XXXX",
-			"bundleID": "com.xxx.xxx",
-			"version": "SDK版本號",
-			"appVersion": "App版本號",
-			"deviceBrand": "裝置廠牌",
-			"deviceModel": "裝置型號",
-			"osVersion": "裝置系統版本",
-			"updateDate": 1234567890,
-			"createDate": 1234567890
-		},
-	]
+	{
+    "err": 0,
+    "msg": "网站列表",
+    "data": [
+        {
+            "agent_id": "1",
+            "appName": "小六合",
+            "url": "https:\/\/www.kuhl.com",
+            "port": "3303",
+            "status": 0,
+            "is_customer_service": [],
+            "logo_url": "\/uploads\/20240807\/90339b73fce2d7db813f3f07797d753c.jpg",
+            "create_time": 1723024592,
+            "time": 1723024592,
+            "id": "66b344d03a4cc73ada7f7ba3",
+            "agent_user_id": 0
+        }
+    ]
+	}
 	```
-
 - ***Status code***
 
     | 錯誤代碼 | 說明 |
@@ -904,4 +846,7 @@ GET /api/v1/manage/device/{projectID}
     | 200 | 查詢成功 |
 
 <br>
+
+
+
 

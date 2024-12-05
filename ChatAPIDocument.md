@@ -1,9 +1,10 @@
-# Manage API Document
+# Chat API Document
 
 ## 目錄
 
-- [註冊](#signUp)
-- [登入](#signIn)
+- [頭像上傳](#photo)
+- [註冊](#reg)
+- [登入](#login)
 
 **使用者**
 
@@ -18,35 +19,59 @@
 - [重置MasterSecret](#editProject)
 - [刪除應用程式](#deleteProject)
 
-**各平台推播憑證設定**
-
-***iOS***
-
-- [查詢iOS平台設定(p12)](#queryPlatformIOSp12)
-- [查詢iOS平台設定(p8)](#queryPlatformIOSp8)
-- [更新平台設定值iOS(p12)](#editPlatformIOSp12)
-- [更新平台設定值iOS(p8)](#editPlatformIOSp8)
-
-***Web***
-
-- [查詢Web平台設定值](#queryPlatformWeb)
-- [更新平台設定值Web](#editPlatformWeb)
-
-**發送推播通知紀錄**
-
-- [查詢發送推播通知紀錄](#querySendRecord)
-- [查詢發送推播通知紀錄詳細資訊](#querySendDetailRecord)
-- [查詢已註冊裝置清單](#queryDevices)
-
 <br>
 
-<a name="signUp"></a>
-## 趣味模塊-獲取視頻播放配置
+<a name="photo"></a>
+## 頭像上傳
 
 ***Path***
 
 ```
-POST /im/App/videoConfig
+POST /im/in/photo
+```
+
+<br>
+
+***Request***
+
+- ***Body (JSON)***
+	
+	| 參數名稱 | 資料類型 | 必填 | 說明      |
+	| --- | --- | --- |---------|
+	| username | String | Y | 用戶名     |
+	| file | binary | Y | 文件（二進制） |
+
+- ***範例***
+
+	```Form Data
+		username: damdao
+		file: (binary)
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body***
+
+{"err":0,"msg":"success"}
+
+- ***Status code***
+
+    | 錯誤代碼 | 說明     |
+    |------|--------|
+    | 200  | 頭像上傳成功 |
+    
+<br>
+
+
+<a name="reg"></a>
+## 註冊
+
+***Path***
+
+```
+POST /im/in/reg
 ```
 
 <br>
@@ -62,11 +87,17 @@ POST /im/App/videoConfig
 
 - ***範例***
 
-	```json
-	{
-		"account": "user01@baifu-tech.net",
-		"password": "Password01"
-	}
+	```Form Data
+		nickname: rfdqef
+		password: 11111111
+		client_id: 
+		type: REGISTER
+		sex: 1
+		invite_code: 111111
+		username: damdao
+		mobileCode: 0
+		_token: 
+		_agent_id: 1
 	```
 	
 <br>
@@ -75,26 +106,24 @@ POST /im/App/videoConfig
     
 - ***Body***
 
-    無
+    {"err":1,"msg":"这个用户名已经存在了"}
 
 - ***Status code***
 
-    | 錯誤代碼 | 說明 |
-    | --- | --- |
-    | 201 | 註冊成功 |
+    | 錯誤代碼 | 說明              |
+    | --- |-----------------|
+    | 200 | 調用成功（但是有可能註冊失敗） |
     
 <br>
 
 
-
-
-<a name="signIn"></a>
+<a name="login"></a>
 ## 登入
 
 ***Path***
 
 ```
-GET /api/v1/manage/signIn
+POST /im/in/login
 ```
 
 <br>
@@ -102,34 +131,66 @@ GET /api/v1/manage/signIn
 ***Request***
 
 - ***Header***
+	無
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| Authorization | String | Y | Basic Auth 認證機制<br>帳號 (email 格式)<br>密碼 (大小寫英文數字組合，最少8碼。至少1大寫英文，1小寫英文，1數字) |
-	
+- ***Body (JSON)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明           |
+	| --- | --- |----|--------------|
+	| username | String | Y  | 用戶名          |
+ 	| password | String | Y  | 密碼           |
+	| client_id | String | N  | 客戶端id        |
+	| invite_code | String | N  | 邀請碼          |
+ 	| _token | String | N  | Token，登陸時不需要 |
+	| _agent_id | String | Y  | 租戶id         |
+
+	***範例***
+
+	```Form Data
+	username: ffffff
+	password: 111111
+	client_id: 
+	invite_code: 
+	_token: 
+	_agent_id: 1
+	```
+
 <br>
-
 ***Response***
     
 - ***Body (JSON)***
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| auth | String | Y | JWT認證Token，後續呼叫其他API需要使用 |
+	| 參數名稱 | 資料類型 | 必填 | 說明           |
+	| --- | --- |----|--------------|
+	| username | String | Y  | 用戶名          |
+ 	| password | String | Y  | 密碼           |
+	| client_id | String | N  | 客戶端id        |
+	| invite_code | String | N  | 邀請碼          |
+ 	| _token | String | N  | Token，登陸時不需要 |
+	| _agent_id | String | Y  | 租戶id         |
 
 	***範例***
 
 	```json
-	{
-		"auth": "JWTAuthToken"
-	}
+{
+    "err": 0,
+    "msg": "登陆成功",
+    "data": {
+        "myavatar": "user\/32835\/300.jpg",
+        "myname": "ffffff",
+        "userid": "Mac_trtc_32835",
+        "usersig": "eJxNjstugzAQRf*FddUYOzakO0RIBWkWpI*IqpJlbAMu4hHjIpKq-x5AROosz5k7c3*tt5fXR8Z581Mbai6ttJ4sYD3MWAlZG5UpqUd4YJwabThF0EV42WBtqwRlhiIt-gU7UdJZjcxeA4BdBAhcpBxapSVlmZnvEnBP9VJ3qqlHBoGNbYjANIs0qpqq2Q5CiBC0JvdXKp-KBYkfxlu841X0vB-0e9Kn*efwkZzc3LtsD*BMemhXSVjgc5eW5TEOCy*MT0Pg5W3ffK06TnDqe10UFVeyv4bC*YaZCop6U-mRc9xYfzcsBVoa",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg",
+        "bottom_url": ""
+    }
+}
 	```
 
 - ***Status code***
 
     | 錯誤代碼 | 說明 |
-    | --- | --- |
-    | 200 | 登入成功 |
+    | - | --- |
+    | 0 | 登陆成功 |
 
 <br>
 

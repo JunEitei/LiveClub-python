@@ -14,6 +14,9 @@
 - [獲取用戶基本信息](#base)
 - [獲取用戶個人信息](#getUserInfo)
 - [獲取聊天列表](#chatList)
+- [獲取好友列表](#friendList)
+
+
 
 **系統相關**
 - [獲取系統動態菜單](#getList)
@@ -576,8 +579,109 @@ POST /im/get/chatList
 
 <br>
 
+<a id="friendList"></a>
+## 獲取好友列表
 
+***Path***
 
+```
+POST /im/get/friendList
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| -- |---------|----|-------|
+  	| list_id | String  | Y  | 列表id  |
+	| friend | Integer | Y  | 好友數量？ |
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	list_id: 0
+	friend: 1
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"data":{"data":[],"member":[]}}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+<a id="friendList"></a>
+## 獲取好友列表
+
+***Path***
+
+```
+POST /im/get/friendList
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型    | 必填 | 說明    |
+	| -- |---------|----|-------|
+  	| list_id | String  | Y  | 列表id  |
+	| friend | Integer | Y  | 好友數量？ |
+ 	| _token | String  | Y  | TOKEN |
+	| _agent_id | String  | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	list_id: 0
+	friend: 1
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{"err":0,"data":{"data":[],"member":[]}}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
 
 
 

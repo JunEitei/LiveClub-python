@@ -4,12 +4,12 @@
 
 - [頭像上傳](#photo)
 - [註冊](#reg)
-- [登入](#login)
+- [登陸](#login)
 
 **使用者**
 
 - [搜索用戶](#searchUser)
-- [變更使用者密碼](#editUser)
+- [獲取我的信息](#base)
 
 **應用程式**
 
@@ -21,7 +21,7 @@
 
 <br>
 
-<a name="photo"></a>
+<a id="photo"></a>
 ## 頭像上傳
 
 ***Path***
@@ -65,7 +65,7 @@ POST /im/in/photo
 <br>
 
 
-<a name="reg"></a>
+<a id="reg"></a>
 ## 註冊
 
 ***Path***
@@ -118,7 +118,7 @@ POST /im/in/reg
 <br>
 
 
-<a name="login"></a>
+<a id="login"></a>
 ## 登入
 
 ***Path***
@@ -186,7 +186,7 @@ POST /im/in/login
 <br>
 
 
-<a name="searchUser"></a>
+<a id="searchUser"></a>
 ## 搜索好友
 
 ***Path***
@@ -237,82 +237,72 @@ POST /im/get/searchUser
 <br>
 
 
-
-
-<a name="querySendDetailRecord"></a>
-## 查詢發送推播通知紀錄詳細資訊
-
-查詢指定的推播通知紀錄詳情
+<a id="base"></a>
+## 獲取我的信息
 
 ***Path***
 
 ```
-GET /api/v1/manage/sendRecord/{sendRecordID}
+POST /im/get/base
 ```
+
 <br>
 
 ***Request***
 
 - ***Header***
+	無
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| Authorization | String | Y | JWT認證機制，登入回傳的 auth, 前面加上 Bearer |
+- ***Body (Form Data)***
+
+	| 參數名稱 | 資料類型 | 必填 | 說明    |
+	| --- | --- |----|-------|
+ 	| _token | String | Y  | TOKEN |
+	| _agent_id | String | Y  | 租戶id  |
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
 	
 <br>
 
-- ***Path Parameters***
-
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| sendRecordID | String | Y | 推播通知紀錄唯一識別碼 |
-
-<br>
-
 ***Response***
-
+    
 - ***Body (JSON)***
 
-	| 參數名稱 | 資料類型 | 必填 | 說明 |
-	| --- | --- | --- | --- |
-	| id | String | Y | 唯一識別碼 |
-	| sendRecordID | String | Y | 推播通知紀錄唯一識別碼 |
-	| token | String | Y | 推播裝置的唯一識別碼 |
-	| status | Bool | Y | 發送推播通知的結果<br> true => 成功<br>false => 失敗 |
-	| result | String | Y | 發送推播通知結果的錯誤訊息 |
-	| createDate | Timestamp(秒) | Y | 建立時間 |
-
-- ***範例***
-
+	***範例***
 	```json
-	[
-		{
-			"id":"XXXX-XXXX-XXXX-XXXX",
-			"sendRecordID":"XXXX-XXXX-XXXX-XXXX",
-			"token":"f97de827fbec19ddc21740c8af54edad",
-			"status": true,
-			"result": "發送成功的資訊",
-			"createDate": 1234567890
-		},
-		{
-			"id":"XXXX-XXXX-XXXX-XXXX",
-			"sendRecordID":"XXXX-XXXX-XXXX-XXXX",
-			"token":"f97de827fbec19ddc21740c8af54edad",
-			"status": false,
-			"result": "發送錯誤的資訊",
-			"createDate": 1234567890
-		},
-		{
-			"id":"XXXX-XXXX-XXXX-XXXX",
-			"sendRecordID":"XXXX-XXXX-XXXX-XXXX",
-			"token":"f97de827fbec19ddc21740c8af54edad",
-			"status": true,
-			"result": "XXXXXXXX",
-			"createDate": 1234567890
-		}
-	]
+	{
+    "err": 0,
+    "msg": "success",
+    "data": {
+        "user_info": {
+            "id": 32835,
+            "nickname": "ffffff",
+            "username": "ffffff",
+            "photo": "user\/32835\/300.jpg",
+            "doodling": "本宝宝暂时还没有想到个性的签名",
+            "sex": 1,
+            "circle_img": "default_circle_img.jpg",
+            "money": "0.00",
+            "trade_password": ""
+        },
+        "new_group_tips_num": 0,
+        "new_friend_tips_num": 0,
+        "no_reader_chat_num": 0,
+        "no_reader_circle": 0,
+        "no_reader_circle_chat_num": 0,
+        "kefu_list_id": "",
+        "bottom_url": "",
+        "pc_page_title": "IM",
+        "disappear_after_read": "1",
+        "disappear_delay_time": "3"
+    }
+	}
 	```
-
 - ***Status code***
 
     | 錯誤代碼 | 說明 |
@@ -322,7 +312,46 @@ GET /api/v1/manage/sendRecord/{sendRecordID}
 <br>
 
 
-<a name="queryDevices"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="queryDevices"></a>
 ## 查詢已註冊裝置清單
 
 查詢已註冊的裝置清單

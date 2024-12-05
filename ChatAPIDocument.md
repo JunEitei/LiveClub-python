@@ -44,7 +44,8 @@
 - [幫助中心文章列表](#getArticleList)
 - [幫助中心文章詳情](#getArticleDetail)
 - [客服](#kefu)
-
+- [關於我們列表](#getAboutList)
+- [關於我們列表文章詳情](#getAboutDetail)
 
 
 <br>
@@ -2396,3 +2397,163 @@ POST /im/get/chatData
 
 <br>
 
+
+<a id="getAboutList"></a>
+## 關於我們列表
+
+***Path***
+
+```
+POST /im/vendor/getAboutList
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱      | 資料類型      | 必填 | 說明     |
+	|-----------|-----------|----|--------|
+ 	| _token    | String    | Y  | TOKEN  |
+	| _agent_id | String    | Y  | 租戶id   |
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": [
+        {
+            "id": 20,
+            "article_name": "用户协议",
+            "article_desc": "用户协议",
+            "content": "<p>如果您未满 18 周岁，请与您的法定监护人一起阅读本协议和上述其他协议，并特别注意未成年人使用条款。特别地，如果您是 14 周岁以下的儿童，您还应请您的监护人在完成账号注册前，仔细阅读腾讯专门制定的《儿童隐私保护声明》。14 岁以下的儿童只有在获得父母对“儿童隐私声明”的同意后才能使用该服务。<\/p>",
+            "status": 1,
+            "position": "关于我们",
+            "create_time": "2020-09-26 01:34:32",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804940493525.jpg",
+            "sort": 0
+        },
+        {
+            "id": 19,
+            "article_name": "隐私政策",
+            "article_desc": "隐私政策",
+            "content": "<p>IM CHAT 非常重视您个人信息的安全。我们将严格遵守法律法规，为您提供更安全、更可靠的服务。以下总结可以帮助您更直观、更简洁地了解《WeChat 隐私原则》的内容<\/p>",
+            "status": 1,
+            "position": "关于我们",
+            "create_time": "2020-09-26 01:33:33",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804940709877.jpg",
+            "sort": 0
+        },
+        {
+            "id": 21,
+            "article_name": "使用帮助",
+            "article_desc": "使用帮助",
+            "content": "<p>IM CHAT 是由北京市迅捷计算机系统有限公司提供的社交网络服务。以下也称为“我们”或“IM CHAT”（本指南中的“IM CHAT”是海外版以外的产品，即“IM CHAT”。IM CHAT 用户通过他们的手机号码来区分。在中国大陆通过手机号注册的用户为 IM CHAT 用户，其余为 Be IM CHAT 用户。与本指南相关的个人信息的处理和保护适用于 IM CHAT 产品）。说明 IM CHAT 如何收集、使用和存储您的个人信息以及您拥有哪些权利<\/p>",
+            "status": 1,
+            "position": "关于我们",
+            "create_time": "2022-07-10 22:11:31",
+            "update_time": "1970-01-01 08:00:00",
+            "small_pic": "\/uploads\/2023-04-03\/20230403\/16804941247728.jpg",
+            "sort": 6
+        }
+    ]
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>
+
+
+<a id="getAboutDetail"></a>
+## 關於我們列表文章詳情
+
+***Path***
+
+```
+POST /im/vendor/getAboutDetail
+
+```
+
+<br>
+
+***Request***
+
+- ***Header***
+	無
+
+- ***Body (Form Data)***
+
+	| 參數名稱     | 資料類型      | 必填 | 說明    |
+	|----------|-----------|----|-------|
+ 	| _token   | String    | Y  | TOKEN |
+	| _agent_id | String    | Y  | 租戶id  |
+ 	| article_id | String    | Y  | 文章id  |
+
+
+
+	***範例***
+
+	```Form Data
+	_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozMjgzNSwiaXNzIjoiaW1faHR0cCIsImlhdCI6MTczMzM2NjM0NiwiZXhwIjo3NzMzMzY2MzQ2LCJuYmYiOjE3MzMzNjYzNDYsInN1YiI6IiIsImp0aSI6IjZkZjI4OWU0ZTNhYTAyYjJkOThkZDg2YjQ5MThmYWFlIn0.m2cGAOVTTFi4U5dn_IDOSS84O0yd5eWPdJTD2POjwXg
+	_agent_id: 1
+	article_id: 1
+	```
+	
+<br>
+
+***Response***
+    
+- ***Body (JSON)***
+
+	***範例***
+	```json
+	{
+    "err": 0,
+    "msg": "",
+    "data": {
+        "id": 21,
+        "article_name": "使用帮助",
+        "article_desc": "使用帮助",
+        "content": "<p>IM CHAT 是由北京市迅捷计算机系统有限公司提供的社交网络服务。以下也称为“我们”或“IM CHAT”（本指南中的“IM CHAT”是海外版以外的产品，即“IM CHAT”。IM CHAT 用户通过他们的手机号码来区分。在中国大陆通过手机号注册的用户为 IM CHAT 用户，其余为 Be IM CHAT 用户。与本指南相关的个人信息的处理和保护适用于 IM CHAT 产品）。说明 IM CHAT 如何收集、使用和存储您的个人信息以及您拥有哪些权利<\/p>",
+        "status": 1,
+        "position": "关于我们",
+        "create_time": "2022-07-10 22:11:31",
+        "update_time": "1970-01-01 08:00:00",
+        "small_pic": "\/uploads\/2023-04-03\/20230403\/16804941247728.jpg",
+        "sort": 6
+    }
+	}
+	```
+- ***Status code***
+
+    | 錯誤代碼 | 說明 |
+    | --- | --- |
+    | 200 | 查詢成功 |
+
+<br>

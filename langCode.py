@@ -19,6 +19,7 @@ def add_language_code_to_frontmatter(folder_path, language_code):
                 with open(file_path, 'r', encoding='ISO-8859-1') as file:
                     content = file.readlines()
 
+
             # Initialize variables to track front matter
             front_matter_end = False
             new_content = []
